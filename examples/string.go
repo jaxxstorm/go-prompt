@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	prompt "github.com/segmentio/go-prompt"
+	prompt "github.com/jaxxstorm/go-prompt"
 )
 
 func main() {

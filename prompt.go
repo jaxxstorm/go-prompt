@@ -9,7 +9,7 @@ import log "github.com/Sirupsen/logrus"
 // String prompt.
 func String(prompt string, args ...interface{}) string {
 	var s string
-	log.Warnf(prompt+": ", args...)
+	log.Infof(prompt+": ", args...)
 	fmt.Scanln(&s)
 	return s
 }
@@ -36,12 +36,12 @@ func Confirm(prompt string, args ...interface{}) bool {
 
 // Choose prompts for a single selection from `list`, returning in the index.
 func Choose(prompt string, list []string) int {
-	fmt.Println()
+	//fmt.Println()
 	for i, val := range list {
-		log.Warnf("  %d) %s\n", i+1, val)
+		log.Infof("  %d) %s\n", i+1, val)
 	}
 
-	fmt.Println()
+	//fmt.Println()
 	i := -1
 
 	for {
@@ -70,7 +70,7 @@ func Choose(prompt string, list []string) int {
 
 // Password prompt.
 func Password(prompt string, args ...interface{}) string {
-	log.Warnf(prompt+": ", args...)
+	log.Infof(prompt+": ", args...)
 	password, _ := gopass.GetPasswd()
 	s := string(password[0:])
 	return s
@@ -78,7 +78,7 @@ func Password(prompt string, args ...interface{}) string {
 
 // Password prompt with mask.
 func PasswordMasked(prompt string, args ...interface{}) string {
-	log.Warnf(prompt+": ", args...)
+	log.Infof(prompt+": ", args...)
 	password, _ := gopass.GetPasswdMasked()
 	s := string(password[0:])
 	return s
