@@ -4,11 +4,12 @@ import "github.com/howeyc/gopass"
 import "strings"
 import "strconv"
 import "fmt"
+import log "github.com/Sirupsen/logrus"
 
 // String prompt.
 func String(prompt string, args ...interface{}) string {
 	var s string
-	fmt.Printf(prompt+": ", args...)
+	log.Infof(prompt+": ", args...)
 	fmt.Scanln(&s)
 	return s
 }

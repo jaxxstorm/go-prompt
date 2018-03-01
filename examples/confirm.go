@@ -1,6 +1,6 @@
 package main
 
-import prompt "github.com/segmentio/go-prompt"
+import prompt "github.com/jaxxstorm/go-prompt"
 
 func main() {
 	if ok := prompt.Confirm("launch %s?", "something"); ok {
